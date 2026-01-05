@@ -22,6 +22,7 @@ jobs:
           echo "release_name=${REF_NAME#*-}" >> $GITHUB_OUTPUT
           DOTNET_VERSION=$(./get_dotnet_version.sh $VERSION)
           echo "dotnet_version=$DOTNET_VERSION" >> $GITHUB_OUTPUT
+          echo "$DOTNET_VERSION"
           
   build:
     name: Build Image

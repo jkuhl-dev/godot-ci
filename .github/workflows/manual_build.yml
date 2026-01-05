@@ -29,6 +29,7 @@ jobs:
         run: |
           DOTNET_VERSION=$(./get_dotnet_version.sh ${{ github.event.inputs.version }})
           echo "dotnet_version=$DOTNET_VERSION" >> $GITHUB_OUTPUT
+          echo "$DOTNET_VERSION"
   get_tags:
     name: Get Tags
     runs-on: ubuntu-24.04
